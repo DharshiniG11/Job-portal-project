@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jobs - QuickJobs</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Internal CSS showing different units */
+    .cards { display:flex; gap:1rem; flex-wrap:wrap; }
+    .card { flex:1 1 250px; padding:1rem; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+    .card h4 { margin:0 0 0.5rem 0; }
+    .small { font-size:0.9rem; }
+  </style>
+</head>
+<body>
+<header id="main-header">
+  <h1>QuickJobs</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="company.html">Companies</a>
+    <a href="apply.html">Apply</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Available Jobs</h2>
+    <p>Below is a table demonstrating tabular data and accessibility.</p>
+    <table class="jobs-table">
+      <thead>
+        <tr><th>#</th><th>Role</th><th>Company</th><th>Skills</th><th>Type</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Data Analyst</td><td>PixelSoft</td><td>
+          <ul><li>SQL</li><li>Excel</li><li>PowerBI</li></ul></td><td>Full-time</td></tr>
+        <tr><td>2</td><td>Frontend Developer</td><td>BlueWave</td><td>
+          <ol><li>HTML/CSS</li><li>JavaScript</li><li>React</li></ol></td><td>Contract</td></tr>
+        <tr><td>3</td><td>ML Intern</td><td>CloudNine</td><td>
+          <ul><li>Python</li><li>Pandas</li><li>Scikit-learn</li></ul></td><td>Internship</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Filter (GET request demo)</h2>
+    <p>Search by role (this submits via GET to <code>process.php</code>):</p>
+    <form action="process.php" method="get">
+      <label for="q">Role:</label>
+      <input type="text" id="q" name="q" placeholder="e.g., Data Analyst">
+      <button type="submit">Search (GET)</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Job Cards (demonstrate floats and responsive)</h2>
+    <div class="cards">
+      <article class="card">
+        <h4>Data Analyst — PixelSoft</h4>
+        <p class="small">Work with sales and CRM data; create dashboards.</p>
+      </article>
+      <article class="card">
+        <h4>Frontend Dev — BlueWave</h4>
+        <p class="small">Build responsive UI and accessible sites.</p>
+      </article>
+      <article class="card">
+        <h4>ML Intern — CloudNine</h4>
+        <p class="small">Assist model building and evaluation.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 QuickJobs</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
