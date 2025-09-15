@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Apply - QuickJobs (Static)</title>
+<link rel="stylesheet" href="style.css"></head><body><header id="main-header"><h1>Apply for a Job (Static)</h1><nav><a href="index.html">Home</a></nav></header>
+<main><h2>Application Form (Static - submits to process.php CSV)</h2>
+<form id="applyForm" action="process.php" method="post" enctype="multipart/form-data" novalidate>
+  <label for="name">Full name *</label><input id="name" name="name" required>
+  <label for="email">Email *</label><input id="email" name="email" type="email" required>
+  <label for="role">Role</label><select id="role" name="role"><option>Data Analyst</option><option>Frontend Developer</option><option>ML Intern</option></select>
+  <fieldset><legend>Employment type</legend><label><input type="radio" name="etype" value="Full-time" checked>Full-time</label><label><input type="radio" name="etype" value="Intern">Intern</label></fieldset>
+  <label>Skills</label><label><input type="checkbox" name="skills[]" value="SQL">SQL</label><label><input type="checkbox" name="skills[]" value="Python">Python</label>
+  <label for="resume">Upload resume</label><input type="file" id="resume" name="resume" accept=".pdf,.txt">
+  <label for="cover">Cover note</label><textarea id="cover" name="cover"></textarea>
+  <button type="submit">Submit (CSV)</button>
+</form></main><footer><p>&copy; 2025 QuickJobs</p></footer><script src="script.js"></script></body></html>

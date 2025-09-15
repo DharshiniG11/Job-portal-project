@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Jobs - QuickJobs (Static)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="main-header"><h1>QuickJobs (Static Jobs)</h1><nav>
+  <a href="index.html">Home</a> <a href="jobs.html">Jobs (static)</a> <a href="jobs.php">Jobs (dynamic)</a>
+</nav></header>
+<main>
+  <h2>Available Jobs (Static)</h2>
+  <table class="jobs-table">
+    <thead><tr><th>#</th><th>Role</th><th>Company</th><th>Skills</th><th>Type</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Data Analyst</td><td>PixelSoft</td><td><ul><li>SQL</li><li>Excel</li><li>PowerBI</li></ul></td><td>Full-time</td></tr>
+      <tr><td>2</td><td>Frontend Developer</td><td>BlueWave</td><td><ol><li>HTML/CSS</li><li>JavaScript</li><li>React</li></ol></td><td>Contract</td></tr>
+      <tr><td>3</td><td>ML Intern</td><td>CloudNine</td><td><ul><li>Python</li><li>Pandas</li><li>Scikit-learn</li></ul></td><td>Internship</td></tr>
+    </tbody>
+  </table>
+  <h3>Filter (GET demo)</h3>
+  <form action="process.php" method="get"><label for="q">Role:</label>
+  <input id="q" name="q" placeholder="e.g., Data Analyst"><button type="submit">Search (GET)</button></form>
+</main>
+<footer><p>&copy; 2025 QuickJobs</p></footer>
+<script src="script.js"></script></body></html>
